@@ -1,0 +1,30 @@
+{
+  "id": "cardano-defi-skills",
+  "name": "cardano-defi-skills",
+  "displayName": "Cardano DeFi Skills",
+  "description": "Trade, lend, mint synthetics, predict, and leverage across 7 Cardano DeFi protocols",
+  "version": "1.0.0",
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "walletAddress": {
+        "type": "string",
+        "description": "Default Cardano wallet address (bech32)"
+      },
+      "dexhunterPartnerId": {
+        "type": "string",
+        "description": "DexHunter X-Partner-Id for fee revenue (optional)"
+      }
+    }
+  },
+  "uiHints": {
+    "walletAddress": { "label": "Wallet Address", "placeholder": "addr1q..." },
+    "dexhunterPartnerId": { "label": "DexHunter Partner ID", "placeholder": "Optional" }
+  },
+  "mcpServers": {
+    "cardano-defi": {
+      "command": "npx",
+      "args": ["@fluxpointstudios/cardano-defi-skills"]
+    }
+  }
+}
